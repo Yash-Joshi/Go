@@ -11,10 +11,12 @@ func doubleAt(value []int, i int) {
 }
 
 //here in this function we are passing by value
-func double(val int) int {
-	p := val * 2
+func double(val int, n *int) (int, int) {
+	p := val
 	fmt.Println("Printing the value", p)
-	return p
+
+	*n *= p
+	return p, *n
 }
 
 //in this function we are passing the value by reference
@@ -30,8 +32,8 @@ func main() {
 
 	// passing by value
 	val := 10
-	double(val)
-	fmt.Println(val)
+	double(val, &val)
+	fmt.Println(val, val)
 
 	//passing by reference
 	valP := 2
