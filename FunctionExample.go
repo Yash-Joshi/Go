@@ -3,6 +3,9 @@
 //The function should return an error if it cant perform a GET request
 
 // func contentType(url string) (string, error)
+
+// Output --> go run FunctionExample.go
+// text/html; charset=utf-8
 package main
 
 import (
